@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="navigacija">
+    <meta name="author" content="Patrik Stojsavljevic">
+    <title>Sebastijan Dračić</title>
+    <link href="css/vendors/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/vendors/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css" />
+</head>
+
+<body>
+    <nav class="nav container-fluid">
+        <div class="row">
+            <div class="nav-logo col-sm-12 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
+                        <a href="index.html">
+                            <h2>SEBASTIJAN DRAČIĆ</h2>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-0 col-lg-0">
+                        <a class="icon" href="#hamburger-icon" onclick="hamburgerDrop()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 row" id="links">
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="index.html">NASLOVNA</a>
+                </div>
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="radovi.html">RADOVI</a>
+                </div>
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="biografija.html">BIOGRAFIJA</a>
+                </div>
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="kontakt.html">KONTAKT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="forma container">
+        <div class="row">
+            <form class="col-sm-12 col-md-12 col-lg-6">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3>KONTAKT</h3>
+                    </div>
+                    <div class="media col-xs-4 col-sm-6 col-md-6 col-lg-6 row" style="text-align: right">
+                        <span class="col-sm-12 col-md-12 col-lg-12">
+                            <a href="https://www.facebook.com/sebastian.dracic"><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://www.instagram.com/sebastijandracic/?hl=hr"><i class="fab fa-instagram-square"></i></a>
+                            <a href="kontakt.html"><i class="fas fa-envelope"></i></a>
+                        </span>
+                    </div>
+                </div>
+                <label for="ime">IME I PREZIME</label><br>
+                <input class="col-sm-12 col-md-5 col-lg-5" style="margin-right: 7%"  type="text" id="ime" name="ime" placeholder="Unesite ime:">
+                <input class="col-sm-12 col-md-6 col-lg-6" type="text" id="prezime" name="prezime" placeholder="Unesite prezime:"><br><br>
+                <label for="mail">E-MAIL</label><br />
+                <input class="col-lg-12" type="email" id="mail" name="mail" /><br /><br />
+                <label for="predmet">PREDMET</label><br />
+                <input class="col-lg-12" type="text" id="predmet" name="predmet" /><br /><br />
+                <label dor="poruka">PORUKA</label><br />
+                <textarea class="col-lg-12" style="height: 37%" id="poruka" name="poruka"></textarea><br /><br />
+                <input class="col-lg-4" type="submit" id="posalji" value="POŠALJI">
+            </form>
+            <div class="kontaktSlika col-lg-6">
+                <img src="images/sebastijandracic2.jpg">
+            </div>
+        </div> 
+    </section>
+
+    <script>
+        function hamburgerDrop() {
+            var x = document.getElementById("links");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+
+<html lang="hr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="navigacija">
+    <meta name="author" content="Patrik Stojsavljevic">
+    <title>Sebastijan Dračić</title>
+    <link href="css/vendors/bootstrap-reboot.css" rel="stylesheet">
+    <link href="css/vendors/bootstrap-grid.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/fixed.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .slider {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .current {
+            opacity: 1;
+        }
+
+        .slide .content {
+            position: absolute;
+            bottom: 5%;
+            left: -600px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 10px 25px;
+            width: 40%;
+            line-height: 1.6;
+            font-size: 14px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: all 0.7s ease-in-out 0.3s;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 45%;
+            left: 0;
+            right: 0;
+        }
+
+        .next-btn,
+        .prev-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #f1f1f1;
+            color: #f1f1f1;
+            font-size: 20px;
+            cursor: pointer;
+            background: transparent;
+            transition: all 0.3s ease;
+            opacity: 0.7;
+        }
+
+        .next-btn {
+            position: absolute;
+            right: 15px;
+        }
+
+        .prev-btn {
+            position: absolute;
+            left: 15px;
+        }
+
+            .next-btn:hover,
+            .prev-btn:hover {
+                background-color: rgba(0,0,0,0.8);
+                opacity: 0.7;
+            }
+        
+        .slide {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(70%);
+        }
+
+    .slide:first-child { background: url("images/dracic_07.jpg") no-repeat center center/cover; }
+
+            .slide:nth-child(2) {
+                background: url("images/kob/theuniverseisindifferent2017uljenaplatnu.jpg") no-repeat center center/cover;
+            }
+
+    .slide:nth-child(3) { background: url("images/crveno more.jpg") no-repeat center center/cover; }
+
+    .slide:nth-child(4) { background: url("images/22x1.125.png") no-repeat center center/cover; }
+
+    .slide:nth-child(5) { background: url("images/gray/1x3.jpg") no-repeat center center/cover; }
+
+        @media screen and (max-width: 768px) {
+            .slide .content {
+                width: 100%;
+                bottom: -15%;
+                left: 0;
+            }
+
+            .slide.current .content {
+                opacity: 1;
+                transform: translateY(0%);
+                left: 0;
+                bottom: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav container-fluid">
+        <div class="row">
+            <div class="nav-logo col-sm-12 col-md-6 col-lg-6">
+                <div class="row">
+                    <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
+                        <a href="index.html">
+                            <h2>SEBASTIJAN DRAČIĆ</h2>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-0 col-lg-0">
+                        <a class="icon" href="#hamburger-icon" onclick="hamburgerDrop()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 row" id="links">
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="index.html">NASLOVNA</a>
+                </div>
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="radovi.html">RADOVI</a>
+                </div>
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="biografija.html">BIOGRAFIJA</a>
+                </div>
+                <div class="nav-element col-sm-12 col-md-3 col-lg-3">
+                    <a href="kontakt.html">KONTAKT</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="slider">
+        <div class="slide current">
+        </div>
+        <div class="slide">
+        </div>
+        <div class="slide">
+        </div>
+        <div class="slide">
+        </div>
+        <div class="slide">
+        </div>
+        <article class="naslovni col-sm-7 col-md-7 col-lg-7">
+            <h2>Sebastijan Dračić</h2>
+            <p>Hrvatski akademski slikar</p>
+            <a href="radovi.html"><button>Pregled radova</button></a>
+        </article>-->
+    </section>
+    <div class="buttons">
+        <button class="prev-btn">&leftarrow;</button>
+        <button class="next-btn">&rightarrow;</button>
+    </div>
+
+    <script>
+        function hamburgerDrop() {
+            var x = document.getElementById("links");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+
+        // Global variable
+        const slides = document.querySelectorAll(".slide");
+        const nextBtn = document.querySelector(".next-btn");
+        const prevBtn = document.querySelector(".prev-btn");
+
+        const auto = true;
+        const intervalTime = 5000;
+        let slidesInterval;
+
+        // Button click listener
+        nextBtn.addEventListener("click", (e) => {
+            nextSlide();
+            if (auto) {
+                //reset slide interval
+                clearInterval(slidesInterval);
+
+                slidesInterval = setInterval(nextSlide, intervalTime);
+            }
+        });
+
+        prevBtn.addEventListener("click", (e) => {
+            prevSlide();
+            if (auto) {
+                //reset slide interval
+                clearInterval(slidesInterval);
+
+                slidesInterval = setInterval(nextSlide, intervalTime);
+            }
+        });
+
+        // let's go create a nextSlide function
+        const nextSlide = () => {
+            // Get current class
+            const current = document.querySelector(".current");
+            // remove current class
+            current.classList.remove("current");
+            // nextElementSibling for next slide
+            if (current.nextElementSibling) {
+                // jump current class in next div
+                current.nextElementSibling.classList.add("current");
+            } else {
+                //reset slide
+                slides[0].classList.add("current");
+            }
+
+            setTimeout(() => current.classList.remove("current"));
+        };
+
+        // let's go create a prevSlide function
+        const prevSlide = () => {
+            // Get current class
+            const current = document.querySelector(".current");
+            // remove current class
+            current.classList.remove("current");
+            // previousElementSibling for prev slide
+            if (current.previousElementSibling) {
+                // jump current class in previous div
+                current.previousElementSibling.classList.add("current");
+            } else {
+                //reset slide
+                slides[slides.length - 1].classList.add("current");
+            }
+
+            setTimeout(() => current.classList.remove("current"));
+        };
+
+        if (auto) {
+            slidesInterval = setInterval(nextSlide, intervalTime);
+        }
+    </script>
+</body>
+
+</html>
