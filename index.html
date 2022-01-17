@@ -1,29 +1,25 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="hr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="navigacija">
+    <meta name="description" content="">
     <meta name="author" content="Patrik Stojsavljevic">
     <title>Sebastijan Dračić</title>
     <link href="css/vendors/bootstrap-reboot.css" rel="stylesheet">
     <link href="css/vendors/bootstrap-grid.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/fixed.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css" />
 
     <style>
         * {
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-        }
-
-        body {
-            font-family: sans-serif;
         }
 
         .slider {
@@ -97,23 +93,31 @@
                 background-color: rgba(0,0,0,0.8);
                 opacity: 0.7;
             }
-        
+
         .slide {
             -webkit-filter: grayscale(100%);
             filter: grayscale(70%);
         }
 
-    .slide:first-child { background: url("images/dracic_07.jpg") no-repeat center center/cover; }
+            .slide:first-child {
+                background: url("images/dracic_07.jpg") no-repeat center center/cover;
+            }
 
             .slide:nth-child(2) {
                 background: url("images/kob/theuniverseisindifferent2017uljenaplatnu.jpg") no-repeat center center/cover;
             }
 
-    .slide:nth-child(3) { background: url("images/crveno more.jpg") no-repeat center center/cover; }
+            .slide:nth-child(3) {
+                background: url("images/crveno more.jpg") no-repeat center center/cover;
+            }
 
-    .slide:nth-child(4) { background: url("images/22x1.125.png") no-repeat center center/cover; }
+            .slide:nth-child(4) {
+                background: url("images/22x1.125.png") no-repeat center center/cover;
+            }
 
-    .slide:nth-child(5) { background: url("images/gray/1x3.jpg") no-repeat center center/cover; }
+            .slide:nth-child(5) {
+                background: url("images/gray/1x3.jpg") no-repeat center center/cover;
+            }
 
         @media screen and (max-width: 768px) {
             .slide .content {
@@ -139,9 +143,7 @@
             <div class="nav-logo col-sm-12 col-md-6 col-lg-6">
                 <div class="row">
                     <div class="col-xs-8 col-sm-8 col-md-12 col-lg-12">
-                        <a href="index.html">
-                            <h2>SEBASTIJAN DRAČIĆ</h2>
-                        </a>
+                        <h2><a href="index.html">SEBASTIJAN DRAČIĆ</a></h2>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-0 col-lg-0">
                         <a class="icon" href="#hamburger-icon" onclick="hamburgerDrop()">
@@ -189,15 +191,8 @@
         <button class="next-btn">&rightarrow;</button>
     </div>
 
+    <script src="js/main.js"></script>
     <script>
-        function hamburgerDrop() {
-            var x = document.getElementById("links");
-            if (x.style.display === "block") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "block";
-            }
-        }
 
         // Global variable
         const slides = document.querySelectorAll(".slide");
