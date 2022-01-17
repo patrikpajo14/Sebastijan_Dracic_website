@@ -268,7 +268,8 @@ body {
 
 @media screen and (max-width: 992px) {
 	h2 {
-		font-size: 18px;
+		font-size: 26px;
+		font-weight: bold;
 	}
 	nav {
 		font-size: 18px;
@@ -330,11 +331,17 @@ body {
 		padding: 0px;
 		text-align: center;
 	}
-		.bocna h2 {
+		.bocna h2 a{
 			font-size: 26px;
+		}
+		.bocna h2{
+			font-size: 24px;
 		}
 		.bocna .icon {
 			font-size: 26px;
+		}
+		.bocna a {
+			font-size: 18px;
 		}
 
 	#izlozbe {
