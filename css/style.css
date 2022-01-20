@@ -103,13 +103,13 @@ button.nav-toggler.open > span:nth-of-type(3) {
 	transition: top 0.125s linear 0s,
 				transform 0.125s ease-out 0.125s;
 }
-nav {
-	margin: 0 auto;
+.nav {
 	font-size: 18px;
 	position: fixed;
-	top:0px;
-	left:0px;
+	left: 0px;
+	top: 15px;
 	z-index: 2;
+
 }
 	nav a {
 		color: #C1C1C1;
@@ -127,7 +127,7 @@ nav {
 	padding-top: 6px;
 	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
-	margin-left: 20px;
+	padding-left: 50px;
 }
 .nav-logo a{
 	margin: 0px;
@@ -139,6 +139,7 @@ nav {
 body {
 	background-color: #242424;
 	height: auto;
+	color: #C1C1C1;
 }
 .icon {
 	display: none;
@@ -147,14 +148,20 @@ body {
 	color: #C1C1C1;
 	font-size: 24px;
 	position: fixed;
-	bottom: 5%;
-	left: 5%;
+	bottom: 12%;
+	left: 7%;
 }
 	.naslovni button {
 		background-color: #9BDE54;
 		color: black;
-		padding: 10px;
+		padding: 20px;
+		border: 0px none;
+		border-radius: 30px;
 	}
+		.naslovni button:hover {
+			background-color: #76c225;
+			box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+		}
 	.naslovni h2{
 		font-size: 48px;
 	}
@@ -162,7 +169,8 @@ body {
 	color: #C1C1C1;
 	font-size: 18px;
 	padding: 20px;
-	margin-top: 50px;
+	margin-top: 100px;
+	margin-bottom: 50px;
 }
 	.forma #ime, #prezime, #mail, #predmet, #poruka {
 		background-color: #C1C1C1;
@@ -174,8 +182,12 @@ body {
 #posalji {
 	background-color: #9BDE54;
 	color: black;
-	padding: 10px;
+	padding: 20px;
 }
+	#posalji:hover {
+		background-color: #76c225;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	}
 .kontaktSlika img{
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(55%);
@@ -196,23 +208,28 @@ body {
 .bocna {
 	background-color: #1A1A1A;
 	height: 100%;
-	margin-left: -20px;
+	margin-left: -10px;
+	padding-top: 10px;
 	position: fixed;
+	top: 0px;
+	left: 0px;
 	z-index: 2;
 }
 .bocna a{
 	text-decoration: none;
 	font-size: 14px;
 }
-.bocna h2{
-	font-size: 18px;
-	font-weight: bold;
-}
-	.bocna h2 a{
+	.bocna h2 {
 		font-size: 18px;
+		font-weight: bold;
+		padding-top: 5px;
+	}
+	.bocna h2 a{
+		font-size: 20px;
 	}
 .bocna .nav-logo{
 	margin: 0px;
+	padding-left: 20px;
 }
 	.bocna .media a {
 		font-size: 24px;
@@ -255,18 +272,47 @@ body {
 	color: #C1C1C1;
 }
 .modal-header {
-	border-bottom: 2px solid #9BDE54;
+	border-bottom: 0px none;
 }
 .modal{
 	position: fixed;
 	top: 0px;
-	right: 0px;
+	left: 0px;
 }
-.naziv-izlozbe h2{
+
+.naziv-izlozbe h2 {
 	color: #C1C1C1;
 	margin-bottom: 4%;
 	margin-top: 1%;
 	margin-left: 8.5%;
+}
+
+form input{
+	padding: 10px;
+	border-radius: 30px;
+	border: 0px none;
+}
+
+form textarea {
+	padding: 10px;
+	border-radius: 30px;
+	border: 0px none;
+}
+
+.bio{
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+	.bio .row {
+		margin-top: 50px;
+		padding: 20px;
+		padding-top: 30px;
+		border-radius: 20px;
+	}
+
+.custom {
+	background-color: #494949;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 @media screen and (max-width: 992px) {
@@ -306,11 +352,11 @@ body {
 @media screen and (max-width: 768px) {
 
 	.naslovni h2 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 
 	.naslovni {
-		font-size: 14px;
+		font-size: 16px;
 	}
 
 	h2 {
@@ -358,9 +404,11 @@ body {
 		display: none;
 	}
 
-	nav {
+	.nav {
 		display: block;
 		background-color: #1A1A1A;
+		top: 0px;
+		padding-left: 0px;
 	}
 
 	.rad {
@@ -390,7 +438,7 @@ body {
 	}
 
 	.forma{
-		margin-top: 40px;
+		margin-top: 60px;
 	}
 	.forma h3 {
 		font-size: 24px;
@@ -405,6 +453,20 @@ body {
 	}
 	.kontaktSlika{
 		display: none;
+	}
+	.nav-logo{
+		padding-left: 38px;
+	}
+
+	.custom {
+		display: flex;
+		flex-direction: column;
+	}
+	.custom-text{
+		order: 2;
+	}
+	.custom-img{
+		order: 1;
 	}
 }
 
