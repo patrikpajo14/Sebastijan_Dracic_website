@@ -140,6 +140,7 @@ body {
 	background-color: #242424;
 	height: auto;
 	color: #C1C1C1;
+	overflow-x: hidden;
 }
 .icon {
 	display: none;
